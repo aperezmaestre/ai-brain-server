@@ -1,4 +1,30 @@
-# AI Brain — Git-Safe Architecture & Operations
+# AI Brain Server — Private AI Knowledge Infrastructure
+
+**Self-hosted AI platform | Local LLMs · Hybrid RAG · Secure automation · Disaster recovery**
+
+A deployed, GPU-accelerated knowledge system designed and operated on personally managed Linux infrastructure. It ingests text, photographs, audio, and Markdown notes; makes them searchable using hybrid retrieval; and maintains semantic links between related notes.
+
+**Engineering highlights**
+- **Local AI:** Ollama and Qwen3:8b inference on an RTX 2080 Ti, with BGE-M3 embeddings and Whisper speech-to-text.
+- **Search architecture:** PostgreSQL/pgvector + full-text search, reciprocal rank fusion, reranking, metadata filters, and incremental ingestion.
+- **Automation:** n8n orchestration; note classification; semantic relationships; bidirectional Obsidian linking; repeat-safe processing.
+- **Security and reliability:** Docker service isolation, SSH hardening, private remote access, systemd monitoring, encrypted off-site backups, and restore verification.
+
+**What makes this more than a chatbot:** the difficult work was integration, data lifecycle design, avoiding self-triggered re-embedding loops, operational hardening, and ensuring the system could be recovered.
+
+> **Portfolio note:** This repository contains *public-safe architecture and operations documentation*, not a deployable copy of the private production environment. The implementation and credentials are not published. The statements below describe the **August 10, 2026** validated snapshot, not a live uptime claim.
+
+### Quick navigation
+- [High-level architecture](#high-level-architecture)
+- [Zero-touch ingestion](#zero-touch-ingestion)
+- [RAG architecture](#rag-architecture)
+- [Semantic relation engine](#semantic-relation-engine)
+- [Security and operations](#networksecurity-model)
+- [Repository safety](#repository-safety)
+
+---
+
+## Detailed technical documentation
 
 > **Public-safe documentation.** This README deliberately excludes private IP addresses, personal usernames, Tailscale hostnames, credentials, tokens, SSH/GPG private-key material, public-key fingerprints, internal note contents, off-site filesystem destinations, and other environment-specific confidential values.
 
